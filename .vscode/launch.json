@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'way_to_code_interview'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=way_to_code_interview",
+                    "--package=way_to_code_interview"
+                ],
+                "filter": {
+                    "name": "way_to_code_interview",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'way_to_code_interview'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=way_to_code_interview",
+                    "--package=way_to_code_interview"
+                ],
+                "filter": {
+                    "name": "way_to_code_interview",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
